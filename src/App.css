@@ -1,38 +1,166 @@
-.App {
-  text-align: center;
+.chat-container {
+  display: flex;
+  height: 100vh;
+  background-color: #f7fafc;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sidebar {
+  width: 16rem;
+  background-color: #1b283e;
+  color: white;
+  padding: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.sidebar-header .title {
+  font-size: 1.25rem;
+  font-weight: bold;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.new-conversation {
+  display: flex;
+  align-items: center;
+  background-color: #1b283e;
+  color: #e3e6ea;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.conversations h2 {
+  color: #a0aec0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-top: 1.5rem;
+}
+.main-chat {
   display: flex;
   flex-direction: column;
+  flex: 1;
+}
+.chat-header {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+  background-color: #edf2f7;
+}
+.header-content {
+  display: flex;
+  align-items: center;
+}
+.header-content h1 {
+  font-size: 1.125rem;
+  margin: 0 0.5rem;
+}
+.user-info {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.alert-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-left: 0.5rem;
+}
+
+.alert-icon {
+  color: red;
+  width: 20px;
+  height: 20px; /* Make sure the color stands out */
+}
+.alert-icon:hover {
+  color: #3182ce;
+}
+
+.messages-area {
+  padding: 1.5rem;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.message.user-message {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.user-message .message-content {
+  background-color: #3182ce;
   color: white;
+  max-width: 30%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-left: auto; /* Align message to the right */
 }
 
-.App-link {
-  color: #61dafb;
+.isense-message .message-content {
+  background-color: #edf2f7;
+  color: #2d3748;
+}
+.message-content {
+  max-width: 70%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+.message-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.timestamp {
+  margin-left: 0.5rem;
+  font-size: 0.75rem;
+  opacity: 0.75;
+}
+.input-area {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-top: 1px solid #e2e8f0;
+  background-color: #ffffff;
+}
+.input-box {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  border: 1px solid #cbd5e0;
+  outline: none;
+}
+.send-button {
+  display: flex;
+  align-items: center;
+  background-color: #3182ce;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  margin-left: 0.5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+  background-color: #edf2f7;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the elements horizontally */
+  flex: 1;
+}
+.user-info {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
 }
